@@ -22,9 +22,9 @@ jobs:
 
       - name: Set unique version
         run: |
-          sed -i "s/<version>1.0-SNAPSHOT<\/version>/<version>1.0.${{ github.run_number }}<\/version>/" pom.xml
+          mvn versions:set -DnewVersion=1.0.${{ github.run_number }} -DgenerateBackupPoms=false
 
-      - name: Deploy package
+      - name: Deploy to GitHub Packages
         run: mvn deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
