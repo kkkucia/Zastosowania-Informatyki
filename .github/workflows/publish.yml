@@ -19,11 +19,8 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
-          server-id: github
-          settings-path: ${{ github.workspace }}
 
       - name: Deploy package
         run: mvn deploy -DskipTests
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
-
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
