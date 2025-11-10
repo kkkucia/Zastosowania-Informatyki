@@ -1,6 +1,6 @@
-package prz.edu.pl.example;
+package prz.edu.pl.zastosowania.example;
 
-import static prz.edu.pl.example.MyUtils.capitalize;
+import static prz.edu.pl.zastosowania.example.MyUtils.capitalize;
 
 public class Main {
     public static void main(String[] args) {

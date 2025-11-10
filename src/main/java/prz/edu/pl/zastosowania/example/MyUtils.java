@@ -1,4 +1,4 @@
-package prz.edu.pl.example;
+package prz.edu.pl.zastosowania.example;
 
 
 public class MyUtils {
